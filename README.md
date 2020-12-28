@@ -23,3 +23,18 @@ x11
 2. PerScreenDPI=False
 3. Font="Droid Sans Regular 16"
 4. Theme=Material-Color-Pink
+
+# python pypi china DNA
+```shell
+mkdir ~/.pip
+touch ~/.pip/pip.conf
+nano ~/.pip/pip.conf
+[global]
+index-url = http://pypi.douban.com/simple
+[install]
+trusted-host=pypi.douban.com
+```
+1. 阿里云 http://mirrors.aliyun.com/pypi/simple/
+2. 中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+3. 豆瓣(douban) http://pypi.douban.com/simple/
+4. 清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
