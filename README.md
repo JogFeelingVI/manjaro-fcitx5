@@ -81,5 +81,12 @@ extra/xf86-video-voodoo 1.2.5-11 (xorg-drivers)
     X.org 3dfx Voodoo1/Voodoo2 2D video driver
 community/xf86-video-qxl 0.1.5-8 (xorg-drivers)
     Xorg X11 qxl video driver
+```
 
+#### Fix Bcm WIFI
+```shell
+uname -r
+show 5.8.18-1-MANJARO
+sudo pacman -S linux58-broadcom-wl
+reboot
 ```
