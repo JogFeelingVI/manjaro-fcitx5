@@ -83,10 +83,46 @@ community/xf86-video-qxl 0.1.5-8 (xorg-drivers)
     Xorg X11 qxl video driver
 ```
 
-#### Fix Bcm WIFI
+#### Fix Bcm4360 WIFI
 ```shell
 uname -r
 show 5.8.18-1-MANJARO
 sudo pacman -S linux58-broadcom-wl
 reboot
+```
+
+#### install bootsplash
+```shell
+↪ sudo pacman -Ss bootsplash
+[sudo] bilier 的密码：
+extra/bootsplash-systemd 0.1.2-1 [已安装]
+    Systemd service files for Bootsplash
+extra/bootsplash-theme-amd 0.1-2
+    Bootsplash Theme AMD Logo
+extra/bootsplash-theme-arch 0.1-2
+    Bootsplash Theme Arch Linux Logo
+extra/bootsplash-theme-gnome 0.1-2
+    Bootsplash Theme Gnome Logo
+extra/bootsplash-theme-illyria 0.1-2
+    Bootsplash Theme Illyria Logo
+extra/bootsplash-theme-kde 0.1-3 [已安装]
+    Bootsplash Theme KDE Logo
+extra/bootsplash-theme-manjaro 0.1-2
+    Bootsplash Theme Manjaro Logo
+extra/bootsplash-theme-manjaro-glitch 1.0-1
+    Simple Manjaro Bootsplash with cool glitch effect
+extra/bootsplash-theme-vendor 0.1-2
+    Bootsplash Theme Vendor Logo
+extra/bootsplash-theme-xfce 0.1-3
+    Bootsplash Theme XFCE Logo
+
+sudo nano /etc/mkinitcpio.conf
+add bootsplash-manjaro to HOOKS=''
+
+sudo nano /etc/default/grub
+FIND GRUB_CMDLINE_LINUX_DEFAULT
+FIND T Name is here /usr/lib/firmware/bootsplash-themes
+remove quiet add bootsplash.bootfile=bootsplash-themes/kde/bootsplash
+sudo mkinitcpio -p linux58
+sudo update-grub
 ```
