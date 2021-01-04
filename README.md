@@ -24,7 +24,7 @@ x11
 3. Font="Droid Sans Regular 16"
 4. Theme=Material-Color-Pink
 
-#### python pypi china DNA
+#### python pypi china Dns
 ```shell
 mkdir ~/.pip
 touch ~/.pip/pip.conf
@@ -125,4 +125,10 @@ FIND T Name is here /usr/lib/firmware/bootsplash-themes
 remove quiet add bootsplash.bootfile=bootsplash-themes/kde/bootsplash
 sudo mkinitcpio -p linux58
 sudo update-grub
+```
+#### kde mount efi
+```shell
+mkdir ~/downloads/usbefi
+sudo mount -o rw /dev/sda1 ~/downloads/usbefi
+sudo umount ~/downloads/usbefi
 ```
