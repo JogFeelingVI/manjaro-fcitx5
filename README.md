@@ -132,8 +132,11 @@ mkdir ~/downloads/usbefi
 sudo mount -o rw /dev/sda1 ~/downloads/usbefi
 sudo umount ~/downloads/usbefi
 ```
-#### code-oss config dir
-```text
-code-oss config
-~/.config/code-oss/
+#### Enable snaps on Manjaro Linux and install Visual Studio Code
+```shell
+- sudo pacman -S snapd
+- sudo systemctl enable --now snapd.socket
+- sudo ln -s /var/lib/snapd/snap /snap
+- sudo snap install code --classic
+- snap run code
 ```
