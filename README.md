@@ -107,7 +107,7 @@ extra/bootsplash-theme-illyria 0.1-2
     Bootsplash Theme Illyria Logo
 extra/bootsplash-theme-kde 0.1-3 [已安装]
     Bootsplash Theme KDE Logo
-extra/bootsplash-theme-manjaro 0.1-2
+extra/bootsplash-theme-manjaro 0.1-2从的
     Bootsplash Theme Manjaro Logo
 extra/bootsplash-theme-manjaro-glitch 1.0-1
     Simple Manjaro Bootsplash with cool glitch effect
@@ -131,4 +131,9 @@ sudo update-grub
 mkdir ~/downloads/usbefi
 sudo mount -o rw /dev/sda1 ~/downloads/usbefi
 sudo umount ~/downloads/usbefi
+```
+#### code-oss config dir
+```text
+code-oss config
+~/.config/code-oss/
 ```
